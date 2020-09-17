@@ -1,5 +1,43 @@
+/*
+    Elements
+*/
+
 body {
-    background-color: #b8d1ff;
+    background-color: #22222c;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+hr {
+    background-color: #33333c;
+}
+
+/*
+    Class
+*/
+
+.card {
+    color: white;
+    background-color: #16151b;
+}
+
+.dark {
+    border-bottom: solid 2px #33333c;
+    background-color: #16151b;
 }
 
 .icon {
@@ -7,10 +45,37 @@ body {
     width: 100%;
 }
 
-#ask-form {
-    margin-top: 2.5vh;
+.header {
+    position: relative;
 }
 
-.title {
+.header a {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.form-control {
+    background-color:  #1c1c24;
+    border-color: #2a2a31;
     color: white;
+}
+
+.form-control:focus {
+    background-color:  #1c1c24;
+    border-color: #2a2a31;
+    color: white;
+}
+
+.form-control:hover {
+    background-color:  #1c1c24;
+    border-color: #2a2a31;
+}
+
+/*
+    Ids
+*/
+
+#ask-form {
+    margin-top: 2.5vh;
 }

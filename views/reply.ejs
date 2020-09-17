@@ -2,7 +2,36 @@
     <body>
         <%- include('partials/navbar.ejs'); %>
         <div class="container">
-            
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h1><%= ask.title %></h1>
+                </div>
+                <div class="card-body">
+                    <p><%= ask.content %></p>
+                </div>
+            </div>
+            <% replies.forEach(reply => {%>
+                <hr>
+                <h3>Resposta</h3>
+                <p><%= reply.content %></p>
+            <% });%>
+            <hr>
+            <div class="card">
+                <form action="/replysuccess" method="post">
+                    <div class="card-header">
+                        <h3>Responder</h3>
+                    </div>
+                    <div class="card-body">
+                        <label>Conteúdo:</label>
+                        <textarea placeholder="Insira sua resposta aqui" name="content" class="form-control"></textarea>
+                        <input type="hidden" name="id" value="<%= ask.id %>">
+                        <br>
+                        <button class="btn btn-primary">Responder</button>
+                    </div>
+                </form>
+            </div>
+            <br>
         </div>
     </body>
 <%- include('partials/footer.ejs'); %>

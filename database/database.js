@@ -1,8 +1,11 @@
 const Sequelize = require('sequelize');
+const config = require('../config.json');
 
-const connection = new Sequelize('ask_system', 'root', '', {
-    host: 'localhost',
-    logging: false,
+let dbCfg = config.database;
+
+const connection = new Sequelize(dbCfg.db, dbCfg.user, dbCfg.password, {
+    host: dbCfg.host,
+    logging: dbCfg.debug,
     dialect: 'mysql'
 });
 

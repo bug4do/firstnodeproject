@@ -7,6 +7,7 @@ const connection = require('./database/database');
 */
 
 const Asks = require('./database/model/Asks');
+const Replies = require('./database/model/Replies');
 
 connection.authenticate()
 .then(() => {
@@ -50,24 +51,48 @@ app.get('/',(req, res) => {
 
 // Replies
 app.get('/reply/:id', (req, res) => {
-    var id = req.params.id;
+    let id = req.params.id;
     Asks.findOne({
         raw: true,
         where: {id: id}
     }).then(ask => {
         if(ask != undefined) {
-            res.render('reply', {
-                ask: ask
-            });
-            return;
+            Replies.findAll({
+                raw: true,
+                order: [
+                    ['id', 'DESC']
+                ],
+                where: {askId: id}
+            }).then(replies => {
+                res.render('reply', {
+                    ask: ask,
+                    replies: replies
+                });
+            }).catch(() => {
+                res.redirect('/');
+            })
         }
-        res.redirect('/');
     })
 });
 
 // Asking
 app.get('/ask', (req, res) => {
     res.render('ask');
+});
+
+app.post('/replysuccess', (req, res) => {
+
+    // Getting data
+    let id = req.body.id;
+    let content = req.body.content;
+
+    // Inserting in the database
+    Replies.create({
+        askId: id,
+        content: content
+    }).then(() => {
+        res.redirect(`/reply/${id}`);
+    });
 });
 
 app.post('/asksuccess', (req, res) => {
