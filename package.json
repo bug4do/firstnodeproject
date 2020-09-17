@@ -1,0 +1,20 @@
+{
+  "name": "project-01",
+  "version": "1.0.0",
+  "description": "An simple asks and questions system",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bug4do/firstnodeproject.git"
+  },
+  "keywords": [
+    "nodejs",
+    "ask"
+  ],
+  "author": "Bugado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bug4do/firstnodeproject/issues"
+  },
+  "homepage": "https://github.com/bug4do/firstnodeproject#readme"
+}
