@@ -70,9 +70,9 @@ app.get('/reply/:id', (req, res) => {
                 });
             }).catch(() => {
                 res.redirect('/');
-            })
+            });
         }
-    })
+    });
 });
 
 // Asking
@@ -108,7 +108,7 @@ app.post('/asksuccess', (req, res) => {
     }).then(() => {
         res.redirect('/');
     });
-}); 
+});
 
 /*
     Listen
