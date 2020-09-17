@@ -11,10 +11,10 @@
                     <p><%= ask.content %></p>
                 </div>
             </div>
+            <h3>Respostas</h3>
             <% replies.forEach(reply => {%>
                 <hr>
-                <h3>Resposta</h3>
-                <p><%= reply.content %></p>
+                <p class="form-control"><%= reply.content %></p>
             <% });%>
             <hr>
             <div class="card">
