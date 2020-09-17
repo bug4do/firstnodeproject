@@ -1,0 +1,16 @@
+body {
+    background-color: #b8d1ff;
+}
+
+.icon {
+    max-width: 55px;
+    width: 100%;
+}
+
+#ask-form {
+    margin-top: 2.5vh;
+}
+
+.title {
+    color: white;
+}
