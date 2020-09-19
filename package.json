@@ -11,6 +11,9 @@
     "nodejs",
     "ask"
   ],
+  "scripts": {
+    "start": "node app"
+  },
   "author": "Bugado",
   "license": "ISC",
   "bugs": {
