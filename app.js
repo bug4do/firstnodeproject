@@ -21,7 +21,7 @@ connection.authenticate()
 */
 
 const app = express();
-const port = 80;
+const port = process.env.PORT || 80;
 
 // EJS
 app.set('view engine', 'ejs');

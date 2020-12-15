@@ -1,9 +1,9 @@
 {
     "database": {
-        "host": "localhost",
-        "user": "root",
-        "password": "123456",
-        "db": "ask_system",
+        "host": "db4free.net",
+        "user": "soulfire_sql",
+        "password": "pasdasdi1923",
+        "db": "soulfire",
         "debug": false
     }
 }
