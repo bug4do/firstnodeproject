@@ -12,6 +12,6 @@ const Asks = connection.define('asks', {
     }
 });
 
-Asks.sync({force: true}).then(() => {});
+Asks.sync({force: false}).then(() => {});
 
 module.exports = Asks;

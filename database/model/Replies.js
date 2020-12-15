@@ -12,6 +12,6 @@ const Replies = connection.define('replies', {
     }
 });
 
-Replies.sync({force: true}).then(() => {});
+Replies.sync({force: false}).then(() => {});
 
 module.exports = Replies;
